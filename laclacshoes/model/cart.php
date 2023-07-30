@@ -82,6 +82,12 @@ require 'webroot/PHPMailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 if(isset($_POST['order'])){
+
+    
+
+   
+
+
     $nn=$_POST['fname'];//người nhận hàng
     $dcnn=$_POST['address']; //địa chỉ người nhận
     $sdtnn=$_POST['phone'];//số điện thoại người nhận
@@ -138,7 +144,23 @@ if(isset($_POST['order'])){
         </body>
         </html>';
     $order=order_product($nn,$dcnn,$sdtnn,$makh,$tt);
+    
+
+    // header('location:/laclacshoes/view/payment.php?current_order_id=' . urlencode("MA_HOA_DON_" + $mahd ) . '&current_order_price=' . urlencode($tt));
+
+    
+    if($_POST["optradio"] == "momo") {
+    // echo ('location:/laclacshoes/view/payment.php?current_order_id=' . urlencode("MA_HOA_DON_" + $mahd ) . '&current_order_price=' . urlencode($tt));
+
+
+// Redirect to the payment page with the variables
+header("Location: /laclacshoes/view/payment.php?ma_khach_hang=MA_THANH_TOAN_" . urlencode($makh) . "&current_order_price=" . urlencode($tt));
+           return;
+       }
+    
+
     if($order){
+        
         $mail = new PHPMailer(true);
         $mail->isSMTP();                                            // sử dụng SMTP
         $mail->Host       = 'smtp.gmail.com';                       // SMTP server
@@ -153,6 +175,7 @@ if(isset($_POST['order'])){
         $mail->Body    = $message;     
         $mail->isHTML(true);                            // định dạng email dưới dạng HTML
         // $mail->addAttachment('path/to/file.pdf');       // đính kèm tập tin PDF
+        
         if ($mail->send()) {
             header('location:?view=order-complete');
         } else {

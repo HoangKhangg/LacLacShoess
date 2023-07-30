@@ -295,6 +295,9 @@ function order_product($nn,$dcnn,$sdtnn,$makh,$tt){
         $sql4="INSERT INTO `nguoinhan`(`MaHD`, `TenNN`, `DiaChiNN`, `SDTNN`) VALUES($mahd,'$nn','$dcnn',$sdtnn)";
         $rs4=mysqli_query($conn,$sql4);
         if($rs4){
+  
+       
+
           unset($_SESSION['cart_product']);
           return true;
         }else{

@@ -15,7 +15,9 @@ if (isset($_SESSION['laclac_khachang'])==false) {
         </div>
     </div>
 </div>
+<form action="?view=order" method="post"  id="form_order">
 <div class="colorlib-product">
+
     <div class="container">
         <div class="row row-pb-lg">
             <div class="col-md-10 offset-md-1">
@@ -37,9 +39,10 @@ if (isset($_SESSION['laclac_khachang'])==false) {
         </div>
         <div class="row">
 					<div class="col-lg-8">
-						<form action="?view=order" method="post" class="colorlib-form" id="form_order">
+						<div class="colorlib-form">
 							<h2>Chi tiết thanh toán</h2>
 		              	    <div class="row">
+
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="fname">Họ và Tên</label>
@@ -66,7 +69,7 @@ if (isset($_SESSION['laclac_khachang'])==false) {
 								</div>
                                 <input type="hidden" name="tongtien" value="<?php echo $_POST['tongtien'] ;?>">
 		               </div>
-		            </form>
+					</div>
 					</div>
 
 					<div class="col-lg-4">
@@ -92,14 +95,14 @@ if (isset($_SESSION['laclac_khachang'])==false) {
 									<div class="form-group">
 										<div class="col-md-12">
 											<div class="radio">
-											   <label><input type="radio" name="optradio" checked> Thanh toán  khi nhận hàng</label>
+											   <label><input type="radio" name="optradio" value="default" checked> Thanh toán  khi nhận hàng</label>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="col-md-12">
 											<div class="radio">
-											   <label><input type="radio" name="optradio" disabled> Thanh toán online (coming soom)</label>
+											   <label><input type="radio" name="optradio" value="momo" > Thanh toán online ( momo )</label>
 											</div>
 										</div>
 									</div>			
@@ -109,9 +112,12 @@ if (isset($_SESSION['laclac_khachang'])==false) {
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<p><button class="btn btn-primary" type="submit" name="order" form="form_order">Thanh Toán</button></p>
+								
 							</div>
 						</div>
 					</div>
 				</div>
     </div>
 </div>
+		            </form>
+

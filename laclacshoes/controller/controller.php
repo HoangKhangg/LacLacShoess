@@ -6,6 +6,9 @@ if(isset($_GET['view'])){
             case 'login':
                 header('location:view/login.php'); 
                 break;
+            case 'payment':
+                    header('location:view/payment.php'); 
+                    break;
             case 'sign-up':
                 include('view/sign-up.php'); 
                 break;
@@ -65,7 +68,7 @@ if(isset($_GET['view'])){
             case 'cart':
                 include('view/cart.php');
                 break;
-                case 'thanhtoan2':
+            case 'thanhtoan2':
                     include('view/checkout.php');
                     break;        
             case 'addtoreview':
