@@ -143,7 +143,7 @@
                             </div>
                             <div class=" text-center ">
                                 <img alt="paymentcode" class="image-qr-code"
-                                    src="https://i.ibb.co/68FVxhv/qr.jpg" />
+                                    src="/laclacshoes/laclacshoes/webroot/v2/gateway/images/qr.jpg" />
                                 <div style="" class="mt-3">
                                     <p class="text-center"><b>Chuyển tiền vào tài khoản momo dưới đây</b></p>
 
