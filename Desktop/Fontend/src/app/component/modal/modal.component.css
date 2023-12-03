@@ -1,0 +1,223 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999; /* high z-index to make sure it's on top */
+}
+.modal-content {
+  background: #fff;  
+  width: 60%;
+  height: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.form-register
+{
+display: flex;
+/* height: 75vh; */
+width: 100%;
+}
+
+.register-left
+{
+width: 50%;
+}
+
+.register-right{
+  /* position:absolute; */
+width: 50%;
+}
+
+.register-right img{
+  width: 100%;
+  
+}
+
+.logo
+{
+margin-top: 15px;
+display: flex;
+height: 10%;
+width: 100%;
+justify-content: center;
+align-items: center;
+}
+
+.logo img
+{
+height: 100%;
+transition: filter 0.3s;
+}
+.register-left:nth-child(1) .logo > img:hover {
+filter: brightness(1.2);
+box-shadow: #000;
+}
+.infomation-register
+{
+margin-left: 9%;
+margin-right: 9%;
+}
+.btn-register-div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn-register-div button{
+width: 30%;
+height: 40px;
+border-radius: 5px;
+border: none;
+margin-top: 10px;
+}
+.btn-register-div button:hover{
+cursor: pointer;
+transform: scale(1.07);
+transition: all 0.3s ease-in-out;
+background-color: #97978d;
+color: #ffffff;
+font-weight: bold
+}
+.form-input{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+}
+.input-register
+{
+font-size: 15px;
+width: 100%;
+height: 100%;
+border: none;
+}
+
+.input-register:focus {
+box-shadow: 0 0 10px rgb(164, 191, 210);
+outline: none;
+border: none;
+}
+.input-container:hover .input-register {
+border: none;
+}
+.lblhover {
+  font-size: 16px;
+  transition: font-size 0.3s, filter 0.3s;
+}
+
+.lblhover:hover {
+  font-size: 18px;
+  filter: brightness(1.2);
+}
+
+/* **********8 */
+
+.form-login
+{
+display: flex;
+width: 100%;
+}
+
+.login-left {
+width: 50%;
+}
+
+.login-left img{
+width: 100%;
+}
+
+.login-right{
+width: 50%;
+}
+
+.form-login .login:nth-child(1)
+{
+position: relative;
+display: grid;
+width: 50%;
+background-color: rgb(235, 229, 220);
+}
+
+.remember
+{
+width: 80%;
+margin-left: 10%;
+margin-right:10%;
+}
+
+.infomation-login
+{
+margin-left: 9%;
+margin-right: 9%;
+}
+
+
+.btn{
+color: #000;
+}
+.span-lgtr-right
+{
+background-color: #ffffff;
+color: #000;
+font-size: 20px;
+align-items: center;
+text-align: center;
+padding: 5px;
+}
+.btn-login
+{
+margin-top: 5%;
+margin-left: 30%;
+margin-right: 30%;
+width: 40%;
+height: 40px;
+background-color: #97978d;
+color: #ffffff;
+border-radius: 5px;
+}
+.btn-login:hover{
+background-color: #ddd;
+color: #000;
+}
+.input-login
+{
+width: 100%;
+}
+
+.input-login:focus {
+box-shadow: 0 0 10px rgb(164, 191, 210);
+}
+.input-container:hover .input-login {
+border: none;
+}
+.lblhover {
+font-size: 16px;
+transition: font-size 0.3s, filter 0.3s;
+}
+
+.lblhover:hover {
+font-size: 18px;
+filter: brightness(1.2);
+}
+
+.form-login .login > img {
+object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form-login .login:nth-child(1) .div-btn-login .btn {
+  margin-bottom: 10px;   /* khoảng cách giữa nút và tiêu đề */
+}
+.error-message
+{
+  color: brown;
+}

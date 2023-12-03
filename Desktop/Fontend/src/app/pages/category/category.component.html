@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+<div class="cartegory row">
+    <div class="container ">
+        <div class="cartegory-left">
+            <div class="cartegory-left-top">
+                <i class="fa-thin fa-sort"></i>
+                <p>Bộ lọc</p>
+            </div>
+            <div class="cartegory-left-bottom">
+              <div class="cartegory-left-bottom-price">
+                <p>Giá</p>
+                <mat-radio-group ng-model="data.group1">
+                    <mat-radio-button value="" >0đ - 100.000đ</mat-radio-button>
+                    <mat-radio-button value=""> 100.000đ - 200.000đ</mat-radio-button>
+                    <mat-radio-button value="">200.000đ - 300.000đ</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="cartegory-left-bottom-author">
+                <p>Tác Giả</p>
+              <mat-radio-group *ngFor="let product of dt" ng-model="data.group2">
+                  <mat-radio-button value="">{{getautor(product.authorId)}}</mat-radio-button>
+              </mat-radio-group>
+              </div>
+
+            </div>
+
+        </div>
+        <div class="cartegory-right">
+
+            <div class="cartegory-right-top">
+                <p>SÁCH NGOẠI NGỮ</p>
+            </div>
+            <div class="cartegory-right-bottom select">
+                <mat-form-field>
+                    <mat-label>Sắp xếp theo giá</mat-label>
+                    <mat-select disableRipple>
+                        <mat-option value="3"></mat-option>
+                        <mat-option value="1">Từ thấp đến cao</mat-option>
+                        <mat-option value="2">Từ cao đến thấp</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="cartegory-right-bottom">
+              <div class="cartegory-right-bottom-item" *ngFor="let product of dt" (click)="navigateToProduct(product.id)">
+                <div class="productIMG" >
+                  <img [src]="getBookImage(product.id)">
+                </div>
+                  <h1 class=" btn-outline-secondary me-2" placement="top" ngbTooltip={{product.title}}>{{ product.title }}</h1>
+                  <p>{{ product.unitPrice | number:'1.0-0' }}<sup>đ</sup></p>
+                  <div class="product-rating">
+                     <app-star-rating></app-star-rating>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
